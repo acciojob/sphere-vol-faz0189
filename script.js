@@ -1,11 +1,11 @@
 document.getElementById("MyForm").addEventListener("submit", function(event) {
     event.preventDefault();
-    let radius = parseFloat(document.getElementById("radius").value);
+    let radius = document.getElementById("radius").value
     let volumeField = document.getElementById("volume");
     
     if (isNaN(radius) || radius < 0) {
         alert("Enter a valid non-negative number");
-        volumeField.value = "";
+        volumeField.value = "NaN";
         return;
     }
     
